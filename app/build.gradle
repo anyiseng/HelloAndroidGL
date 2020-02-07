@@ -1,0 +1,23 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "29.0.1"
+
+    defaultConfig {
+        applicationId "org.halide_lang.hellohalidegl"
+        minSdkVersion 17
+        targetSdkVersion 26
+
+        ndk {
+            moduleName "android_halide_gl_native"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
